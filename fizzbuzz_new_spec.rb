@@ -1,7 +1,7 @@
 require_relative 'fizzbuzz_new'
 
 describe Fixnum do
-  context 'should know if it is a multiple of' do
+  context 'should know it is a multiple of' do
     it '3' do
       expect(3.multiple_of?(3)).to be_true
     end
@@ -12,6 +12,20 @@ describe Fixnum do
 
     it '15' do
       expect(15.multiple_of?(15)).to be_true
+    end
+  end
+
+  context 'should know it is NOT a multiple of' do
+    it '3' do
+      expect(2.multiple_of?(3)).to be_false
+    end
+
+    it '5' do
+      expect(8.multiple_of?(5)).to be_false
+    end
+
+    it '15' do
+      expect(100.multiple_of?(15)).to be_false
     end
   end
 
